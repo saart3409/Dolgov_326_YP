@@ -1,0 +1,1135 @@
+/* шрифты */
+@font-face {
+    font-family: 'Playfair_Display';
+    src: url(../fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Latoreg';
+    src: url(../fonts/Lato2OFL/Lato2OFL/Lato-Italic.ttf);
+}
+
+@font-face {
+    font-family: 'Latobold';
+    src: url(../fonts/Lato2OFL/Lato2OFL/Lato-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Latoregob';
+    src: url(../fonts/Lato2OFL/Lato2OFL/Lato-Regular.ttf);
+}
+
+/* анимация часов */
+@keyframes rotateWatch {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* обращение ко всему + контейнер */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    transition: 0.5s;
+    font-family: 'Latoreg';
+    line-height: 130%;
+    scroll-behavior: smooth;
+    color: #1E1E1E;
+}
+
+html {
+    overflow-x: clip;
+}
+
+body {
+    background-color: #F6F5F2;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* заголовки+отступы */
+.py-160 {
+    padding: 160px 0;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title .titlezag {
+    color: #B8987A;
+    font-size: 32px;
+    font-family: 'Latobold';
+}
+
+.title .titlepodzg1 {
+    font-family: 'Playfair_Display';
+    font-size: 40px;
+    font-weight: 500;
+    width: 450px;
+    margin-bottom: 50px;
+    color: #1E1E1E;
+}
+
+.title .titlepodzg2 {
+    font-family: 'Playfair_Display';
+    font-size: 40px;
+    font-weight: 500;
+    width: 450px;
+    margin-bottom: 50px;
+    color: #F6F5F2;
+}
+
+.title p {
+    font-size: 18px;
+    font-weight: 500;
+    width: 230px;
+    color: #1E1E1E;
+    text-align: left;
+}
+
+.title-center {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.title2 {
+    width: 600px;
+}
+
+.title2 .title h4 {
+    font-family: 'Playfair_Display';
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+    color: #F6F5F2;
+}
+
+span {
+    color: #B8987A;
+}
+/* шапка */
+@keyframes headerScroll {
+    0% {
+        background-color: rgba(30, 30, 30, 0);
+    }
+
+    100% {
+        background-color: rgba(30, 30, 30, 1)
+    }
+}
+
+header {
+    width: 1300px;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    padding: 20px 15px;
+    animation: headerScroll linear both;
+    animation-timeline: scroll();
+    border-radius: 30px;
+    margin-top: 10px;
+
+}
+
+.header-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-block img {
+    width: 260px;
+}
+
+.header-block nav {
+    display: flex;
+    gap: 15px;
+
+}
+
+.header-block nav a {
+    color: #F6F5F2;
+    font-family: 'Latoreg';
+    display: inline-block;
+    padding: 14px 20px;
+    border-radius: 20px;
+    font-size: 25px;
+}
+
+.header-block nav a:hover {
+    background-color: rgba(246, 245, 242, 0.6);
+    color: #1E1E1E;
+}
+/* шапка все */
+/* баннер */
+.banner {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: start;
+}
+
+.banner video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.banner-text {
+    position: relative;
+    z-index: 2;
+    margin-top: 250px;
+    width: 1200px;
+}
+
+.banner-text h1 {
+    width: 700px;
+    font-family: 'Playfair_Display';
+    font-style: italic;
+    font-size: 96px;
+    color: #F6F5F2;
+}
+
+.banner-text p {
+    font-size: 24px;
+    width: 700px;
+    margin-top: 20px;
+    color: #F6F5F2;
+    margin-bottom: 40px;
+}
+
+.banner-text a {
+    font-family: 'Latoreg';
+    display: inline-block;
+    padding: 14px 20px;
+    border-radius: 20px;
+    font-size: 25px;
+    background-color: rgba(246, 245, 242, 0.6);
+    color: #1E1E1E;
+    border: 1px solid rgba(246, 245, 242, 0.6);
+}
+
+.banner-text a:hover {
+    background-color: transparent;
+    color: #F6F5F2;
+
+}
+/* баннер все */
+/* о нас */
+.onas {
+    position: relative;
+}
+
+.onas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #B8987A;
+    z-index: 4;
+}
+
+.onas-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.onas-text p {
+    max-width: 570px;
+    font-size: 32px;
+    font-family: 'Latoregob';
+
+
+}
+
+.spannaz {
+    color: #1E1E1E;
+    font-family: 'Playfair_Display';
+    font-weight: 500;
+}
+
+.star2onas {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: rotate(55deg);
+}
+
+.clockmal {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transition: 2s;
+}
+
+.clockmal:hover {
+    transform: rotate(360deg);
+    transition: 2s;
+}
+
+.imgonas {
+    display: flex;
+    min-width: 602px;
+    position: relative;
+    justify-content: end;
+}
+
+.imgonas1 {
+    height: 368px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+/* о нас все */
+/* услуги */
+.usl {
+    background-color: #1E1E1E;
+    position: relative;
+    z-index: 3;
+}
+
+.usl::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #B8987A;
+    z-index: 4;
+}
+
+.usl-imgs p {
+    font-size: 32px;
+    font-weight: 500;
+    font-family: 'Playfair_Display';
+    position: absolute;
+    text-align: center;
+    width: 265px;
+    padding: 20px 0;
+    bottom: 0;
+    background-color: rgba(30, 30, 30, 0.8);
+    color: #F6F5F2;
+
+}
+
+.usl-block {
+    position: relative;
+
+}
+
+.usl-imgs {
+    position: relative;
+    height: 810px;
+}
+
+.usl-block img {
+    height: 364px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.usl1 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.usl1:hover,
+.usl2:hover,
+.usl3:hover,
+.usl4:hover {
+    transform: scale(1.1);
+}
+
+.usl2 {
+    position: absolute;
+    left: 25%;
+    bottom: 25%;
+}
+
+.usl3 {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+}
+
+.usl4 {
+    position: absolute;
+    left: 75%;
+    bottom: 75%;
+}
+
+.usl h2 {
+    font-size: 24px;
+    font-family: 'Latoreg';
+    color: #F6F5F2;
+    width: 476px;
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.onasusl {
+    position: relative;
+}
+
+.watchphone1 {
+    position: absolute;
+    left: -280px;
+    z-index: 3;
+    height: 500px;
+    bottom: 50%;
+    animation: rotateWatch linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+}
+
+.gear1 {
+    position: absolute;
+    right: 10px;
+    bottom: 300px;
+    animation: rotateWatch linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+}
+
+.usl .gearusl1 {
+    height: 260px;
+    position: absolute;
+    top: 420px;
+    animation: rotateWatch linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+}
+
+.usl .gearusl2 {
+    height: 330px;
+    position: absolute;
+    top: 350px;
+    left: 240px;
+    animation: footerGearRotate2 linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+}
+/* услуги все */
+/* как мы работаем */
+.mirab {
+    position: relative;
+}
+
+.mirab::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #B8987A;
+    z-index: 4;
+}
+
+.kakmirab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+    position: relative;
+}
+
+.krugmirab {
+    height: 89px;
+    width: 89px;
+    border: 2px solid #B8987A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #F6F5F2;
+}
+
+.krugmirab p {
+    font-size: 40px;
+    font-weight: 500;
+    font-family: 'Playfair_Display';
+    padding-bottom: 10px;
+    color: #1E1E1E;
+}
+
+.blockmirab {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+}
+
+.blockmirab h4 {
+    font-size: 32px;
+    font-family: 'Playfair_Display';
+    color: #1E1E1E;
+}
+
+.kakmirab-poloska {
+    height: 2px;
+    width: 1092px;
+    background-color: #B8987A;
+    position: absolute;
+    z-index: 2;
+    bottom: 65%;
+    margin-left: 10px;
+}
+
+.watchphone2 {
+    height: 600px;
+    position: absolute;
+    right: 10px;
+    top: -40%;
+    z-index: 2;
+    transition: 2s;
+    animation: rotateWatch linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+}
+
+
+.mirab .slogmirab {
+    font-size: 22px;
+    font-weight: 300;
+    font-family: 'Playfair_Display';
+    width: 160px;
+    position: absolute;
+    right: 40%;
+    top: 60px;
+}
+
+.mirab span {
+    font-size: 22px;
+    font-weight: 300;
+    font-family: 'Playfair_Display';
+    width: 160px;
+    position: absolute;
+    right: 40%;
+    top: 150px;
+}
+
+.gear2 {
+    position: absolute;
+    bottom: -30px;
+    left: -20px;
+    animation: rotateWatch linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+}
+/* как мы работаем все */
+/* работы */
+.raboti {
+    background-color: #1E1E1E;
+    position: relative;
+    z-index: 3;
+}
+
+.raboti::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #B8987A;
+    z-index: 4;
+}
+
+.raboti-block-imgs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.raboti-card {
+    width: 569px;
+}
+
+.raboti-card h5 {
+    font-family: 'Playfair_Display';
+    font-size: 32px;
+    font-weight: 500;
+    color: #F6F5F2;
+}
+
+.raboti-card h6 {
+    font-family: 'Playfair_Display';
+    font-size: 18px;
+    font-weight: 500;
+    color: #F6F5F2;
+    border-bottom: 2px solid #B8987A;
+    margin: 10px 0;
+}
+
+.raboti-card p {
+    font-family: 'Latoregob';
+    font-size: 16px;
+    font-weight: 500;
+    color: #F6F5F2;
+}
+
+.raboti-card-img {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.do {
+    position: absolute;
+    background-color: rgba(30, 30, 30, 0.6);
+    padding: 0 9px 8px 9px;
+    color: #F6F5F2;
+    left: 13px;
+    top: 7px;
+    border-radius: 20px;
+}
+
+.posle {
+    position: absolute;
+    background-color: rgba(30, 30, 30, 0.8);
+    color: #F6F5F2;
+    padding: 0 9px 8px 9px;
+    border-radius: 20px;
+    left: 307px;
+    top: 7px;
+}
+
+.posle p,
+.do p {
+    font-family: 'Playfair_Display';
+}
+
+.sliders {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.sliders p {
+    font-size: 40px;
+    font-family: 'Playfair_Display';
+    color: #1E1E1E;
+}
+
+.slider {
+    background-color: rgba(246, 245, 242, 0.6);
+    border-radius: 50%;
+    height: 38px;
+    width: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider:hover {
+    background-color: #F6F5F2;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.raboti-blockbtn {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 22px;
+}
+
+.raboti-block a {
+    font-family: 'Latoreg';
+    display: inline-block;
+    padding: 14px 20px;
+    border-radius: 20px;
+    font-size: 25px;
+    background-color: rgba(246, 245, 242, 0.6);
+    color: #1E1E1E;
+    border: 1px solid rgba(246, 245, 242, 0.6);
+}
+
+.raboti-block a:hover {
+    background-color: rgba(30, 30, 30, 0.6);
+    color: #F6F5F2;
+}
+
+.gear3 {
+    position: absolute;
+    right: -36%;
+    top: 30%;
+    height: 700px;
+    transition: 2s;
+    animation: rotateWatch linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+}
+
+.star1raboti {
+    position: absolute;
+    top: 185px;
+    left: 0;
+}
+
+.star2raboti {
+    position: absolute;
+    top: 20px;
+    left: 212px;
+}
+/* работы все */
+/* отзывы */
+.otzivi {
+    position: relative;
+}
+
+.otzivi::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #B8987A;
+    z-index: 4;
+}
+
+.otzivi::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #B8987A;
+    z-index: 4;
+}
+
+.otzivi-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.otzivicards {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+}
+
+.otzivicard {
+    width: 255px;
+    height: 255px;
+    background: #F6F5F2;
+    box-shadow: 1px 0px 13px -5px #1E1E1E;
+    padding: 10px;
+}
+
+.otzivicard p {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.otzivava {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.otzivava h4 {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Playfair_Display';
+}
+
+.otzivava img {
+    height: 85px;
+    width: 85px;
+}
+
+.otzstars img {
+    height: 13px;
+    width: 13px;
+}
+
+
+.otzivi-block .title h2 {
+    width: 300px;
+    margin: 0;
+
+}
+
+.otzivi-block .title h3 {
+    width: 300px;
+    margin: 0;
+    padding: 0;
+}
+
+.sliderandotz .slider {
+    box-shadow: 1px 0px 13px -5px #1E1E1E;
+    font-size: 40px;
+    font-family: 'Playfair_Display';
+    color: #1E1E1E;
+}
+
+.sliderandotz .slider:hover {
+    background-color: rgba(30, 30, 30, 0.8);
+    color: #F6F5F2;
+}
+
+.watchphone3 {
+    position: absolute;
+    left: -35%;
+    height: 100%;
+    top: 0;
+    transition: 2s;
+    animation: rotateWatch linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+}
+
+.gear4 {
+    position: absolute;
+    top: 10px;
+    z-index: 4;
+    right: -30px;
+    animation: rotateWatch linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+}
+/* отзывы все */
+/* форма */
+.zatemnenie {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(30, 30, 30, 0.6);
+
+}
+
+.forma {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.forma video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.form-block {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.form-block form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-block form label {
+    color: #F6F5F2;
+    font-size: 20px;
+}
+
+.form-block form input {
+    width: 100%;
+    height: 44px;
+    box-sizing: border-box;
+    padding: 25px 13px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(246, 245, 242, 0.6);
+    color: #1E1E1E;
+    font-size: 20px;
+    outline: none;
+}
+
+.form-block form input::placeholder {
+    color: #1E1E1E;
+}
+
+.form-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 20px 0;
+
+}
+
+.form-block .form-check input {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    accent-color: #B8987A;
+}
+
+.form-check p {
+    color: #F6F5F2;
+    font-size: 14px;
+}
+
+.form-check a {
+    text-decoration: underline;
+    color: #F6F5F2;
+    font-size: 14px;
+}
+
+.form-block form button {
+    width: 220px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(246, 245, 242, 0.6);
+    color: #1E1E1E;
+    font-size: 20px;
+    border: 1px solid rgba(246, 245, 242, 0.6);
+    cursor: pointer;
+}
+
+.form-block form button:hover {
+    background-color: transparent;
+    color: #F6F5F2;
+    transform: scale(1.1);
+}
+
+.form-block .title {
+    width: 450px;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.form-block .title h4 {
+    width: 100%;
+    margin: 0;
+    color: #F6F5F2;
+}
+
+.form-block .textform {
+    width: 270px;
+    color: #F6F5F2;
+    font-size: 18px;
+    text-align: right;
+}
+/* форма все */
+/* подвал */
+footer {
+    background-color: #1E1E1E;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #B8987A;
+    z-index: 4;
+}
+
+footer img {
+    width: 260px;
+}
+
+.footer-block nav a,
+.confooter a,
+.uristandsocfooter a {
+    color: #F6F5F2;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.footer-block h2 {
+    color: #F6F5F2;
+    font-family: 'Playfair_Display';
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.uristandsocfooter .soc img {
+    height: 40px;
+    width: 40px;
+
+}
+
+.footer-block nav,
+.footer-block .confooter,
+.footer-block .uristandsocfooter {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.osnfooter {
+    display: flex;
+    justify-content: space-between;
+    width: 878px;
+}
+
+.soc {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #F6F5F2;
+    font-size: 20px;
+    font-family: 'Playfair_Display';
+    font-weight: 500;
+    margin-top: 54px;
+    padding-bottom: 10px;
+}
+
+.gearfooter1 {
+    position: absolute;
+    width: 330px;
+    bottom: -70px;
+    left: -40px;
+}
+
+.gearfooter2 {
+    position: absolute;
+    width: 230px;
+    bottom: -70px;
+    left: 270px;
+}
+
+.gearfooter3 {
+    position: absolute;
+    width: 235px;
+    bottom: -70px;
+    left: 485px;
+    transform: rotate(20deg);
+}
+
+.gearfooter4 {
+    position: absolute;
+    width: 200px;
+    bottom: -70px;
+    left: 700px;
+}
+
+.gearfooter5 {
+    position: absolute;
+    width: 220px;
+    bottom: -70px;
+    left: 885px;
+    transform: rotate(20deg);
+}
+
+.gearfooter6 {
+    position: absolute;
+    width: 235px;
+    bottom: -70px;
+    left: 1090px;
+}
+
+.gearfooter7 {
+    position: absolute;
+    width: 220px;
+    bottom: -70px;
+    left: 1310px;
+    transform: rotate(20deg);
+}
+
+.gearfooter8 {
+    position: absolute;
+    width: 350px;
+    bottom: 60px;
+    right: -18%;
+}
+
+@keyframes footerGearRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes footerGearRotate2 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.gearfooter2,
+.gearfooter4,
+.gearfooter6,
+.gearfooter8 {
+    animation: footerGearRotate 30s linear infinite;
+}
+
+.gearfooter1,
+.gearfooter3,
+.gearfooter5,
+.gearfooter7 {
+    animation: footerGearRotate2 30s linear infinite;
+}
+/* подвал все */
